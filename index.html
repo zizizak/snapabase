@@ -85,6 +85,22 @@
   }
   .logo-icon svg { width: 16px; height: 16px; }
 
+  .nav-links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  .nav-link {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+    letter-spacing: 0.02em;
+  }
+  .nav-link:hover { color: var(--green); }
+
   .nav-buy {
     font-family: var(--mono);
     font-size: 13px;
@@ -683,6 +699,76 @@
     overflow: hidden;
   }
 
+  /* ─── INSTALLATION ─── */
+  .install-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 40px;
+  }
+  .install-col h3 {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--green);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .install-step {
+    margin-bottom: 24px;
+  }
+  .install-step h4 {
+    font-size: 15px;
+    color: var(--text);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .install-step h4 span {
+    font-family: var(--mono);
+    color: var(--green-dim);
+    font-size: 13px;
+  }
+  .install-step p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+  }
+  .code-box {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--green);
+    overflow-x: auto;
+    margin-bottom: 8px;
+  }
+  .code-comment { color: var(--text-dim); }
+
+  .trouble-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  .trouble-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .trouble-card h4 {
+    font-size: 14px;
+    color: var(--yellow);
+    margin-bottom: 8px;
+  }
+  .trouble-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
   /* ─── RESPONSIVE ─── */
   @media (max-width: 768px) {
     nav { padding: 14px 20px; }
@@ -690,6 +776,8 @@
     .features-grid { grid-template-columns: 1fr; }
     .pain-grid { grid-template-columns: 1fr; }
     .pricing-card { padding: 32px 24px; }
+    .install-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
   }
 
   /* Scroll animations */
@@ -718,6 +806,16 @@
     </div>
     Snapabase
   </div>
+  
+  <div class="nav-links">
+    <a href="#problem" class="nav-link">Problem</a>
+    <a href="#features" class="nav-link">Features</a>
+    <a href="#comparison" class="nav-link">Comparison</a>
+    <a href="#setup" class="nav-link">How it works</a>
+    <a href="#install" class="nav-link">Installation</a>
+    <a href="#pricing" class="nav-link">Pricing</a>
+  </div>
+
   <a href="https://snapabase.lemonsqueezy.com/checkout" class="nav-buy">Buy — $49</a>
 </nav>
 
@@ -780,7 +878,7 @@
 <div class="divider"></div>
 
 <!-- PAIN -->
-<section class="section reveal">
+<section class="section reveal" id="problem">
   <div class="section-label">The Problem</div>
   <h2 class="section-title">Why <em>pg_dump alone</em><br>always breaks on Supabase</h2>
   <p class="section-sub">Supabase Cloud has strict permission rules. A standard restore fails in 4 different ways every single time.</p>
@@ -820,7 +918,7 @@
 <div class="divider"></div>
 
 <!-- FEATURES -->
-<section class="section reveal">
+<section class="section reveal" id="features">
   <div class="section-label">Solution</div>
   <h2 class="section-title">Everything handled<br><em>automatically</em></h2>
   <p class="section-sub">Snapabase wraps pg_dump, psql, and Supabase CLI with the logic that makes Supabase restores actually work.</p>
@@ -874,7 +972,7 @@
 <div class="divider"></div>
 
 <!-- COMPARE -->
-<section class="section reveal">
+<section class="section reveal" id="comparison">
   <div class="section-label">Comparison</div>
   <h2 class="section-title">vs. the <em>alternatives</em></h2>
   <p class="section-sub" style="margin-bottom: 32px;">Why other approaches leave you with a broken restore at 2am.</p>
@@ -906,7 +1004,7 @@
 <div class="divider"></div>
 
 <!-- HOW IT WORKS -->
-<section class="section reveal">
+<section class="section reveal" id="setup">
   <div class="section-label">Setup</div>
   <h2 class="section-title">Up and running<br>in <em>3 minutes</em></h2>
 
@@ -939,6 +1037,75 @@
         <h4>Set up automatic schedule</h4>
         <p>Configure daily or weekly backups. The scheduler runs in the background even when the main window is closed.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- INSTALLATION -->
+<section class="section reveal" id="install">
+  <div class="section-label">Installation</div>
+  <h2 class="section-title">System Prerequisites<br>& <em>Setup Guide</em></h2>
+  <p class="section-sub">Snapabase relies on official PostgreSQL and Supabase CLI tools. Ensure they are installed before launching.</p>
+
+  <div class="install-grid">
+    <!-- WINDOWS -->
+    <div class="install-col">
+      <h3>For Windows</h3>
+      
+      <div class="install-step">
+        <h4><span>01</span> PostgreSQL (psql & pg_dump)</h4>
+        <p>Download the installer and note the <code>/bin</code> folder path.</p>
+        <a href="https://www.postgresql.org/download/windows/" class="btn-primary" style="padding: 8px 16px; font-size: 12px; display: inline-flex;">Download Installer</a>
+      </div>
+
+      <div class="install-step">
+        <h4><span>02</span> Supabase CLI (via Scoop)</h4>
+        <p>The fastest way to install and update Supabase CLI.</p>
+        <div class="code-box">
+          <span class="code-comment"># Install Scoop first if you haven't</span><br>
+          Set-ExecutionPolicy RemoteSigned -Scope CurrentUser<br>
+          iwr -useb get.scoop.sh | iex<br><br>
+          <span class="code-comment"># Then install supabase</span><br>
+          scoop install supabase
+        </div>
+      </div>
+    </div>
+
+    <!-- MACOS -->
+    <div class="install-col">
+      <h3>For macOS</h3>
+      
+      <div class="install-step">
+        <h4><span>01</span> PostgreSQL & CLI</h4>
+        <p>Using Homebrew is recommended for automatic path management.</p>
+        <div class="code-box">
+          brew install postgresql<br>
+          brew install supabase/tap/supabase
+        </div>
+      </div>
+
+      <div class="install-step">
+        <h4><span>02</span> Permissions</h4>
+        <p>If macOS blocks the app, go to <b>Privacy & Security</b> and click "Open Anyway".</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top: 60px;">Troubleshooting</div>
+  <div class="trouble-grid">
+    <div class="trouble-card">
+      <h4>"psql is not recognized"</h4>
+      <p>Ensure you have selected the correct path to <code>psql.exe</code> in the Snapabase Settings tab.</p>
+    </div>
+    <div class="trouble-card">
+      <h4>Connection Timeout</h4>
+      <p>Check if your Supabase project is "Paused" in the dashboard. Resume it to continue.</p>
+    </div>
+    <div class="trouble-card">
+      <h4>Data Privacy</h4>
+      <p>Your connection strings and backups never leave your machine. Snapabase is 100% local-first.</p>
     </div>
   </div>
 </section>
