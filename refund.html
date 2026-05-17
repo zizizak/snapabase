@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refund Policy — Snapabase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0e0f;
+    --surface: #111618;
+    --surface2: #161d1f;
+    --border: #1e2a2d;
+    --border2: #243236;
+    --green: #3dffa0;
+    --green-dim: #1a7a4a;
+    --green-glow: rgba(61,255,160,0.12);
+    --text: #e8f4f0;
+    --text-muted: #5a7a70;
+    --text-dim: #3a5a52;
+    --red: #ff5b5b;
+    --yellow: #ffd166;
+    --mono: 'Fira Code', monospace;
+    --sans: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(61,255,160,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(61,255,160,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background: rgba(10,14,15,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo {
+    font-family: var(--mono);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--green);
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+  .logo-icon {
+    width: 28px; height: 28px;
+    background: var(--green);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .logo-icon svg { width: 16px; height: 16px; }
+
+  .nav-links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  .nav-link {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+    letter-spacing: 0.02em;
+  }
+  .nav-link:hover { color: var(--green); }
+
+  .page-container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 120px auto 80px;
+    padding: 0 24px;
+  }
+
+  .page-title {
+    font-family: var(--sans);
+    font-weight: 800;
+    font-size: clamp(32px, 5vw, 48px);
+    color: var(--text);
+    margin-bottom: 40px;
+    letter-spacing: -0.02em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 24px;
+  }
+
+  .content-block {
+    margin-bottom: 32px;
+  }
+
+  .content-block h2 {
+    font-family: var(--sans);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .content-block p {
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+  
+  .content-block ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 16px;
+  }
+  
+  .content-block ul li {
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .content-block ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+
+  .content-block a {
+    color: var(--green);
+    text-decoration: none;
+  }
+
+  .content-block a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    padding: 40px 24px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+  footer a { color: var(--text-muted); text-decoration: none; margin: 0 8px; }
+  footer a:hover { color: var(--green); }
+
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#0a0e0f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" />
+        <path d="M3 5v14a2 2 0 0 0 2 2h16v-5H5a2 2 0 0 1 0-4h14v4" />
+      </svg>
+    </div>
+    Snapabase
+  </a>
+  <div class="nav-links">
+    <a href="index.html#features" class="nav-link">Features</a>
+    <a href="index.html#pricing" class="nav-link">Pricing</a>
+  </div>
+</nav>
+
+<div class="page-container">
+  <h1 class="page-title">Refund Policy</h1>
+  
+  <div class="content-block">
+    <h2>1. 14-Day Guarantee</h2>
+    <p>We want you to be fully satisfied with Snapabase. If you purchase a license and find that the software does not meet your needs, does not work for your specific Supabase configuration, or you are simply unhappy with it, we offer a full refund within 14 days of your original purchase date.</p>
+  </div>
+
+  <div class="content-block">
+    <h2>2. How to Request a Refund</h2>
+    <p>To request a refund, please send an email to <a href="mailto:quocvinhdo@gmail.com">quocvinhdo@gmail.com</a>.</p>
+    <ul>
+      <li>Please include the email address you used to purchase the software.</li>
+      <li>Provide your order number or license key (found in your Lemon Squeezy receipt).</li>
+      <li>While not required, we would appreciate it if you could briefly let us know why Snapabase didn't work out for you, so we can improve the software.</li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+    <h2>3. Refund Processing</h2>
+    <p>All payments and refunds are handled by our merchant of record, Lemon Squeezy.</p>
+    <ul>
+      <li>Once your refund request is approved, it will be processed immediately on our end.</li>
+      <li>It may take a few business days for the funds to appear back on your original payment method, depending on your bank or credit card provider.</li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+    <h2>4. License Invalidation</h2>
+    <p>Please note that upon receiving a refund, your license key will be invalidated. You will no longer be able to activate or use Snapabase on any machine.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>
+    Snapabase &nbsp;·&nbsp; 
+    <a href="terms.html">Terms</a> &nbsp;·&nbsp; 
+    <a href="privacy.html">Privacy</a> &nbsp;·&nbsp; 
+    <a href="refund.html">Refunds</a>
+  </p>
+  <p style="margin-top: 8px; font-size: 11px;">Not affiliated with Supabase, Inc.</p>
+</footer>
+
+</body>
+</html>

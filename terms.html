@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms & Conditions — Snapabase</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0e0f;
+    --surface: #111618;
+    --surface2: #161d1f;
+    --border: #1e2a2d;
+    --border2: #243236;
+    --green: #3dffa0;
+    --green-dim: #1a7a4a;
+    --green-glow: rgba(61,255,160,0.12);
+    --text: #e8f4f0;
+    --text-muted: #5a7a70;
+    --text-dim: #3a5a52;
+    --red: #ff5b5b;
+    --yellow: #ffd166;
+    --mono: 'Fira Code', monospace;
+    --sans: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(61,255,160,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(61,255,160,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 40px;
+    background: rgba(10,14,15,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .logo {
+    font-family: var(--mono);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--green);
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+  .logo-icon {
+    width: 28px; height: 28px;
+    background: var(--green);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .logo-icon svg { width: 16px; height: 16px; }
+
+  .nav-links {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+  .nav-link {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+    letter-spacing: 0.02em;
+  }
+  .nav-link:hover { color: var(--green); }
+
+  .page-container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 120px auto 80px;
+    padding: 0 24px;
+  }
+
+  .page-title {
+    font-family: var(--sans);
+    font-weight: 800;
+    font-size: clamp(32px, 5vw, 48px);
+    color: var(--text);
+    margin-bottom: 40px;
+    letter-spacing: -0.02em;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 24px;
+  }
+
+  .content-block {
+    margin-bottom: 32px;
+  }
+
+  .content-block h2 {
+    font-family: var(--sans);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .content-block p {
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+  
+  .content-block ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 16px;
+  }
+  
+  .content-block ul li {
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  .content-block ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--green);
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+
+  .content-block a {
+    color: var(--green);
+    text-decoration: none;
+  }
+
+  .content-block a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    padding: 40px 24px;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text-dim);
+  }
+  footer a { color: var(--text-muted); text-decoration: none; margin: 0 8px; }
+  footer a:hover { color: var(--green); }
+
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#0a0e0f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" />
+        <path d="M3 5v14a2 2 0 0 0 2 2h16v-5H5a2 2 0 0 1 0-4h14v4" />
+      </svg>
+    </div>
+    Snapabase
+  </a>
+  <div class="nav-links">
+    <a href="index.html#features" class="nav-link">Features</a>
+    <a href="index.html#pricing" class="nav-link">Pricing</a>
+  </div>
+</nav>
+
+<div class="page-container">
+  <h1 class="page-title">Terms & Conditions</h1>
+  
+  <div class="content-block">
+    <h2>1. Introduction</h2>
+    <p>Welcome to Snapabase. By purchasing, downloading, or using Snapabase, you agree to these Terms & Conditions. Snapabase is a software tool designed specifically to assist users with backing up and restoring Supabase databases.</p>
+  </div>
+
+  <div class="content-block">
+    <h2>2. User Responsibilities</h2>
+    <p>As a user of Snapabase, you are fully responsible for the following:</p>
+    <ul>
+      <li>Providing valid API keys and database credentials to connect to your Supabase projects.</li>
+      <li>Ensuring that the credentials you provide have the appropriate permissions for the operations you intend to perform.</li>
+      <li>Keeping your license key, database credentials, and exported backup files secure.</li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+    <h2>3. Limitation of Liability</h2>
+    <p>Database management is inherently sensitive. By using Snapabase, you acknowledge and agree that:</p>
+    <ul>
+      <li>We are <strong>not responsible</strong> for any misconfiguration, incorrect restorations, or accidental data deletion caused by the user.</li>
+      <li>We are not liable for any data loss, downtime, or damages resulting from the use or inability to use the software.</li>
+      <li>The software is provided "as is", without warranty of any kind, express or implied.</li>
+    </ul>
+    <p><strong>Recommendation:</strong> We strongly recommend that users always verify and test their backups in a safe environment (e.g., a local or staging database) before attempting to restore data to a production environment.</p>
+  </div>
+
+  <div class="content-block">
+    <h2>4. Payment, Licensing, and Refunds</h2>
+    <p>Snapabase is sold as a lifetime license for a one-time payment. This license grants you the right to use the software on up to 3 personal machines.</p>
+    <ul>
+      <li><strong>Payment:</strong> Payments are processed securely via our merchant of record, Lemon Squeezy.</li>
+      <li><strong>License:</strong> Your license key is strictly for personal or internal business use and may not be resold, shared, or distributed.</li>
+      <li><strong>Refunds:</strong> Please refer to our <a href="refund.html">Refund Policy</a> for detailed information on our money-back guarantee.</li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+    <h2>5. Support Policy</h2>
+    <p>Your lifetime license includes access to software updates and email support.</p>
+    <ul>
+      <li>Support is provided primarily for bug reports, licensing issues, and general software inquiries.</li>
+      <li>We do not provide general database administration consulting or custom development services.</li>
+      <li>To request support, contact us at <a href="mailto:quocvinhdo@gmail.com">quocvinhdo@gmail.com</a>.</li>
+    </ul>
+  </div>
+
+  <div class="content-block">
+    <h2>6. Changes to Terms</h2>
+    <p>We reserve the right to modify these Terms & Conditions at any time. Significant changes will be communicated via email or on our website. Continued use of the software constitutes acceptance of any changes.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>
+    Snapabase &nbsp;·&nbsp; 
+    <a href="terms.html">Terms</a> &nbsp;·&nbsp; 
+    <a href="privacy.html">Privacy</a> &nbsp;·&nbsp; 
+    <a href="refund.html">Refunds</a>
+  </p>
+  <p style="margin-top: 8px; font-size: 11px;">Not affiliated with Supabase, Inc.</p>
+</footer>
+
+</body>
+</html>
