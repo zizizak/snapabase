@@ -59,7 +59,7 @@ Snapabase relies on official PostgreSQL and Supabase command-line tools (CLI) to
 
 Snapabase offers a lifetime license for professional features.
 
-1.  Purchase your key at [Lemon Squeezy](https://snapabase.lemonsqueezy.com/checkout).
+1.  Purchase your key at [Lemon Squeezy](https://snapabase.lemonsqueezy.com/checkout/buy/81aad4d6-3987-4a73-a2de-bffee5f02a5f).
 2.  In the app, go to **Settings > License**.
 3.  Paste your key and click **Activate**.
 

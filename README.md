@@ -7,7 +7,7 @@
   **The Local-First Management Tool for Supabase Projects**
 
   [![Website](https://img.shields.io/website?url=https%3A%2F%2Fsnapabase.vercel.app%2F)](https://snapabase.vercel.app/)
-  [![License](https://img.shields.io/badge/license-Commercial-blue.svg)](https://snapabase.lemonsqueezy.com/checkout)
+  [![License](https://img.shields.io/badge/license-Commercial-blue.svg)](https://snapabase.lemonsqueezy.com/checkout/buy/81aad4d6-3987-4a73-a2de-bffee5f02a5f)
   [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS-lightgrey.svg)](#-installation--setup)
 
   <p align="center">
@@ -52,7 +52,7 @@ Snapabase requires the official command-line tools to function. For detailed set
 
 Snapabase is a professional tool built to save you hours of manual backup and deployment work. We offer a simple, one-time purchase with no recurring subscriptions.
 
-👉 **[Get your Lifetime License here](https://snapabase.lemonsqueezy.com/checkout)**
+👉 **[Get your Lifetime License here](https://snapabase.lemonsqueezy.com/checkout/buy/81aad4d6-3987-4a73-a2de-bffee5f02a5f)**
 
 **How to activate:**
 Once you have purchased a license, simply open Snapabase, navigate to **Settings > License**, paste your key, and click **Activate**.

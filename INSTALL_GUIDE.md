@@ -59,7 +59,7 @@ Snapabase sử dụng các công cụ dòng lệnh (CLI) chính thức của Pos
 
 Snapabase cung cấp giấy phép trọn đời để sử dụng các tính năng chuyên nghiệp.
 
-1.  Mua mã kích hoạt tại [Lemon Squeezy](https://snapabase.lemonsqueezy.com/checkout).
+1.  Mua mã kích hoạt tại [Lemon Squeezy](https://snapabase.lemonsqueezy.com/checkout/buy/81aad4d6-3987-4a73-a2de-bffee5f02a5f).
 2.  Trong ứng dụng, vào mục **Settings > License**.
 3.  Dán mã của bạn và nhấn **Activate**.
 
